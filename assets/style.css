@@ -257,12 +257,6 @@ select {
   word-wrap: normal;
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
 
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -285,12 +279,7 @@ input[type="checkbox"] {
   padding: 0;
 }
 
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
-  -webkit-appearance: listbox;
-}
+
 
 textarea {
   overflow: auto;
@@ -3196,6 +3185,9 @@ fieldset:disabled a.btn {
   border-color: #F85C70;
 }
 
+.btn-outline-danger:hover a{
+  color: #fff;
+}
 .btn-outline-danger:hover {
   color: #fff;
   background-color: #F85C70;
