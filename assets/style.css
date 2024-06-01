@@ -91,6 +91,8 @@ abbr[data-original-title] {
           text-decoration-skip-ink: none;
 }
 
+
+
 address {
   margin-bottom: 1rem;
   font-style: normal;
@@ -317,6 +319,7 @@ progress {
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -10865,6 +10868,10 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
+.display-none{
+  display: none;
+}
+
 @media print {
   *,
   *::before,
@@ -11328,6 +11335,62 @@ p {
     min-width: 100%;
   }
 }
+
+/* Blog post popup window  */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 0.4s linear; /* Smooth transition for the opacity */
+}
+
+
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Position at the center */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+  transform: scale(0.9); /* Start slightly scaled down */
+  transition: transform 0.4s ease-out; /* Smooth transition for the transform */
+}
+
+.popup.show {
+  display: block; /* Make popup visible */
+  opacity: 1; /* Fade to fully opaque */
+}
+
+.popup-content.show {
+  transform: scale(1); /* Scale back to normal size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Blog post popup window End */
+
+
 
 .custom-map {
   height: 400px;
